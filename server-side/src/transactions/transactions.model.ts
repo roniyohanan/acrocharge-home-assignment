@@ -4,7 +4,7 @@ import * as mongoose from 'mongoose';
 import { Transaction } from './transactions.interface';
 
 const transactionSchema: mongoose.Schema = new mongoose.Schema({
-  costumerId: {
+  customerId: {
     type: String,
     required: true,
   },
