@@ -11,7 +11,7 @@ const initMongo = async (): Promise<void> => {
   });
 };
 
-(async (): Promise<void> => {
+(async () => {
   await initMongo();
   Server.startServer();
 })();

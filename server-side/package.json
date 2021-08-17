@@ -15,7 +15,6 @@
   "dependencies": {
     "express": "^4.17.1",
     "helmet": "^3.21.2",
-    "http": "0.0.1-security",
     "joi": "^17.4.2",
     "mongoose": "5.13.5"
   },

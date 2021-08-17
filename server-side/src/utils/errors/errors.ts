@@ -6,12 +6,12 @@ export class ApplicationError extends Error {
 
 export class TransactionNotFound extends ApplicationError {
   constructor() {
-    super(404, 'User not found');
+    super(404, 'Transaction not found');
   }
 }
 
 export class CustomerNotFound extends ApplicationError {
   constructor() {
-    super(404, 'User not found');
+    super(404, 'Customer not found');
   }
 }

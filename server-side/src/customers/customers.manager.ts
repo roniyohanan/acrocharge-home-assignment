@@ -8,7 +8,7 @@ export class CustomersManager {
   }
 
   static async getById(id: string): Promise<Customer> {
-    const customer: Customer | null = await CustomersRepository.getById(id);
+    const customer = await CustomersRepository.getById(id);
     if (!customer) throw new CustomerNotFound();
     return customer;
   }
@@ -18,13 +18,13 @@ export class CustomersManager {
   }
 
   static async updateById(id: string, updatedValues: Partial<Customer>): Promise<Customer | null> {
-    const upadtedCustomer: Customer | null = await CustomersRepository.updateById(id, updatedValues);
+    const upadtedCustomer = await CustomersRepository.updateById(id, updatedValues);
     if (!upadtedCustomer) throw new CustomerNotFound();
     return upadtedCustomer;
   }
 
   static async deleteById(id: string): Promise<Customer | null> {
-    const customer: Customer | null = await CustomersRepository.getById(id);
+    const customer = await CustomersRepository.getById(id);
     if (!customer) throw new CustomerNotFound();
     return customer;
   }

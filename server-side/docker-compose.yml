@@ -1,6 +1,6 @@
 version: "3"
 services:
-  users-api:
+  billing-api:
     build: ./
     environment: 
         DB_CONNECTION_URL: mongodb://mongo:27017

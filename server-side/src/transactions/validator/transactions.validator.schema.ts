@@ -16,13 +16,13 @@ export const validateId = Joi.object({
   },
 });
 
-export const canCreate = Joi.object({
+export const createTransactionSchema = Joi.object({
   body: transactionSchema,
   query: {},
   params: {},
 });
 
-export const canUpdate = Joi.object({
+export const updateTransactionSchema = Joi.object({
   body: transactionSchema,
   query: {},
   params: {
