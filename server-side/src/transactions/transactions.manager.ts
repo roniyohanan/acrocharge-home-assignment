@@ -8,23 +8,23 @@ export class TransactionManager {
   }
 
   static async getById(id: string): Promise<Transaction> {
-    const transaction: Transaction | null = await TransactionRepository.getById(id);
+    const transaction = await TransactionRepository.getById(id);
     if (!transaction) throw new TransactionNotFound();
     return transaction;
   }
 
-  static async create(transaction: Transaction): Promise<Transaction> {
+  static create(transaction: Transaction): Promise<Transaction> {
     return TransactionRepository.create(transaction);
   }
 
   static async updateById(id: string, updatedValues: Partial<Transaction>): Promise<Transaction | null> {
-    const upadtedTransaction: Transaction | null = await TransactionRepository.updateById(id, updatedValues);
+    const upadtedTransaction = await TransactionRepository.updateById(id, updatedValues);
     if (!upadtedTransaction) throw new TransactionNotFound();
     return upadtedTransaction;
   }
 
   static async deleteById(id: string): Promise<Transaction | null> {
-    const transaction: Transaction | null = await TransactionRepository.getById(id);
+    const transaction = await TransactionRepository.deleteById(id);
     if (!transaction) throw new TransactionNotFound();
     return transaction;
   }
