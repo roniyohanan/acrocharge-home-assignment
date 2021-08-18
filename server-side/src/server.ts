@@ -2,6 +2,7 @@
 import * as express from 'express';
 import * as http from 'http';
 import * as helmet from 'helmet';
+import * as cors from 'cors';
 import { logger } from './utils/logger/logger';
 import { SeverityLevel } from './utils/logger/severity-level';
 import { errorMiddleware } from './utils/errors/error-handler';
@@ -46,6 +47,7 @@ export class Server {
 
   private configurationMiddleware(): void {
     this.app.use(helmet());
+    this.app.use(cors());
     this.app.use(this.setHeaders);
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: true }));

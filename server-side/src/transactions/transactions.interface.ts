@@ -1,6 +1,6 @@
 export interface Transaction {
   id?: string;
-  costumerId: string;
+  customerId: string;
   totalPrice: number;
   currency: string;
   cerditCardType: string;

@@ -24,7 +24,7 @@ export class CustomersManager {
   }
 
   static async deleteById(id: string): Promise<Customer | null> {
-    const customer = await CustomersRepository.getById(id);
+    const customer = await CustomersRepository.deleteById(id);
     if (!customer) throw new CustomerNotFound();
     return customer;
   }

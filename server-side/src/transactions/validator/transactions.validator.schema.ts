@@ -1,7 +1,7 @@
 import * as Joi from 'joi';
 
 const transactionSchema = Joi.object({
-  costumerId: Joi.string().regex(/^[0-9a-fA-F]{24}$/).required(),
+  customerId: Joi.string().regex(/^[0-9a-fA-F]{24}$/).required(),
   totalPrice: Joi.number().required(),
   currency: Joi.string().required(),
   cerditCardType: Joi.string().required(),

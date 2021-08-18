@@ -1,10 +1,8 @@
 import * as Joi from 'joi';
-import { Gender } from '../customers.interface';
 
 const customerSchema = Joi.object({
   firstName: Joi.string().required(),
   lastName: Joi.string().required(),
-  gender: Joi.string().valid(...Object.values(Gender)).required(),
   email: Joi.string().required(),
   phoneNumber: Joi.string().required(),
   address: Joi.string().required(),
