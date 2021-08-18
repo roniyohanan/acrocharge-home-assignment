@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-underscore-dangle */
 import * as mongoose from 'mongoose';
-import { Customer, Gender } from './customers.interface';
+import { Customer } from './customers.interface';
 
 const customerSchema: mongoose.Schema = new mongoose.Schema({
   firstName: {
@@ -10,10 +10,6 @@ const customerSchema: mongoose.Schema = new mongoose.Schema({
   },
   lastName: {
     type: String,
-    required: true,
-  },
-  gender: {
-    type: Gender,
     required: true,
   },
   email: {
